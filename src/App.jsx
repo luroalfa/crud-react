@@ -2,6 +2,7 @@ import React from 'react'
 import shortid from 'shortid'
 
 function App() {
+
   const [task, setTask] = React.useState('')
   const [listTask, setListTask] = React.useState([])
 
@@ -14,14 +15,18 @@ function App() {
       console.log('Elemento vacio')
       return
     }
+
     console.log(task)
 
     setListTask([
-      ...task,
+      ...listTask,
       { id: shortid.generate(), nameOfTask: task }
     ])
+
     setTask('')
   }
+
+
 
   return (
     <div className="container mt-5">
@@ -45,7 +50,9 @@ function App() {
         </div>
 
         <div className="col-4">
+
           <h4 className="text-center">Add Task</h4>
+
           <form onSubmit={addTask}>
             <input
               type="text"
@@ -54,7 +61,14 @@ function App() {
               onChange={e => setTask(e.target.value)}
               value={task}
             />
-            <button className="btn btn-dark btn-block" type="submit">Add</button>
+
+            <button
+              className="btn btn-dark btn-block"
+              type="submit"
+            >
+              Add
+            </button>
+
           </form>
         </div>
 
