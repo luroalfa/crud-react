@@ -1,12 +1,12 @@
 import React from 'react'
-import Album from './components/Album.jsx';
-import Notes from "./components/Notes.jsx"
+import Assistance from './components/Assistance.jsx'
+// import Notes from "./components/Notes.jsx"
 
 function App() {
   return (
     <>
       {/* <Notes /> */}
-      <Album />
+      <Assistance />
     </>
   );
 }
